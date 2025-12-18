@@ -1,0 +1,38 @@
+[gd_scene load_steps=7 format=3 uid="uid://x14v7if02thp"]
+
+[ext_resource type="Script" uid="uid://cwgubcu4exc0p" path="res://Characters/player.gd" id="1_5mj4t"]
+[ext_resource type="PackedScene" uid="uid://dqio2whje4jf7" path="res://Characters/Components/dash_component.tscn" id="2_eovys"]
+[ext_resource type="PackedScene" uid="uid://smuvrejft7l6" path="res://Characters/Components/health_component.tscn" id="3_vb825"]
+[ext_resource type="PackedScene" uid="uid://b8m3y6s1t7p2" path="res://Characters/Components/jump_component.tscn" id="4_65n15"]
+[ext_resource type="PackedScene" uid="uid://ce6ad5fpa4xm5" path="res://Characters/Components/teleport_component.tscn" id="5_l48on"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ywxx0"]
+
+[node name="Player" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_5mj4t")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_ywxx0")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -10.0
+offset_top = -15.0
+offset_right = 10.0
+offset_bottom = 15.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+
+[node name="HDashComponent" parent="." instance=ExtResource("2_eovys")]
+
+[node name="SlamComponent" parent="." instance=ExtResource("2_eovys")]
+
+[node name="HealthComponent" parent="." instance=ExtResource("3_vb825")]
+
+[node name="JumpComponent" parent="." instance=ExtResource("4_65n15")]
+
+[node name="TeleportComponent" parent="." instance=ExtResource("5_l48on")]
+
+[editable path="HealthComponent"]

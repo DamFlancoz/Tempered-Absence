@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://du2cacf8s46xc"]
+
+[ext_resource type="Script" uid="uid://cbddvqhqkspuh" path="res://menus/keybind_button.gd" id="1_0yagd"]
+
+[node name="KeybindButton" type="HBoxContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 1
+script = ExtResource("1_0yagd")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="."]
+layout_mode = 2
+
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

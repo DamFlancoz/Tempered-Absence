@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://smuvrejft7l6"]
+
+[ext_resource type="Script" uid="uid://b18ojo6aiq5ck" path="res://Characters/Components/health_component.gd" id="1_1g6pp"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1g6pp"]
+
+[node name="HealthComponent" type="Node2D"]
+script = ExtResource("1_1g6pp")
+
+[node name="HurtBox" type="Area2D" parent="."]
+collision_layer = 4
+collision_mask = 8
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+shape = SubResource("CapsuleShape2D_1g6pp")
+
+[connection signal="area_entered" from="HurtBox" to="." method="_on_hurt_box_area_entered"]

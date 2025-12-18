@@ -1,0 +1,15 @@
+# Godot-specific ignores
+.godot/
+extended_editor_settings.cfg
+export_presets.cfg
+
+# Shared loader (for C# projects)
+.mono/
+bin/
+obj/
+
+# OS-generated files
+.DS_Store
+Thumbs.db
+
+AiSummary.txt

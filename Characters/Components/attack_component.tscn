@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://b3v1m8c2a3d3"]
+
+[ext_resource type="Script" uid="uid://duqlidn8bje63" path="res://Characters/Components/attack_component.gd" id="1_q6d8c"]
+[ext_resource type="PackedScene" uid="uid://e4f7a2d8b13c" path="res://Characters/Components/attacks/quick_jab_attack.tscn" id="2_wsb5s"]
+
+[node name="AttackComponent" type="Node2D"]
+script = ExtResource("1_q6d8c")
+
+[node name="QuickJabAttack" parent="." instance=ExtResource("2_wsb5s")]

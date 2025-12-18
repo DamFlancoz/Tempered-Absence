@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://b8m3y6s1t7p2"]
+
+[ext_resource type="Script" uid="uid://dcudwfy8uoy3g" path="res://Characters/Components/jump_component.gd" id="1_uqbqx"]
+
+[node name="JumpComponent" type="Node2D"]
+script = ExtResource("1_uqbqx")
+
+[node name="RestrictionTimer" type="Timer" parent="."]
+one_shot = true

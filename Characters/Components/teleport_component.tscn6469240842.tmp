@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce6ad5fpa4xm5"]
+
+[ext_resource type="Script" uid="uid://tr5upv36eck4" path="res://Characters/Components/teleport_component.gd" id="1_3btsr"]
+[ext_resource type="PackedScene" uid="uid://c5yv22wj778mw" path="res://Characters/Components/teleport_projectile.tscn" id="2_1as0h"]
+
+[node name="TeleportComponent" type="Node2D"]
+script = ExtResource("1_3btsr")
+launch_offset = null
+launch_speed_factor = null
+
+[node name="TeleportProjectile" parent="." instance=ExtResource("2_1as0h")]

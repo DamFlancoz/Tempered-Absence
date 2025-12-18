@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://bcb7l5dmyegam"]
+
+[ext_resource type="Script" uid="uid://cr727oah3ovb4" path="res://Characters/boss_1.gd" id="1_nark7"]
+[ext_resource type="PackedScene" uid="uid://b3v1m8c2a3d3" path="res://Characters/Components/attack_component.tscn" id="2_e2lqe"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_03i7l"]
+radius = 40.0
+height = 142.0
+
+[node name="Boss1" type="CharacterBody2D"]
+script = ExtResource("1_nark7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_03i7l")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = -40.0
+offset_top = -71.0
+offset_right = 40.0
+offset_bottom = 74.0
+
+[node name="AttackComponent" parent="." instance=ExtResource("2_e2lqe")]
+position = Vector2(40, 56)
